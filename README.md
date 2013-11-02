@@ -1,14 +1,8 @@
 # reQUnit [![Build Status](https://secure.travis-ci.org/azu/reQUnit.png?branch=master)](http://travis-ci.org/azu/reQUnit)
 
-Converting Qunit o jasmine.
+Converting QUnit to jasmine.
 
 ## Getting Started
-Install the module with: `npm install reQUnit`
-
-```javascript
-var reQUnit = require('reQUnit');
-reQUnit.awesome(); // "awesome"
-```
 
 ## Documentation
 _(Coming soon)_

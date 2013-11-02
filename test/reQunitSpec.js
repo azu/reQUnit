@@ -85,7 +85,7 @@ describe("reQunit", function () {
                         ok(true, "should be true");
                     });
                 });
-            })
+            });
         });
     });
 });
