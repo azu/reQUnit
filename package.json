@@ -1,42 +1,52 @@
 {
-    "name": "reQUnit",
-    "description": "Converting Qunit to jasmine.",
-    "version": "0.1.0",
-    "homepage": "https://github.com/azu/reQUnit",
-    "author": {
-        "name": "azu",
-        "email": "azuciao@gmail.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/azu/reQUnit.git"
-    },
-    "bugs": {
-        "url": "https://github.com/azu/reQUnit/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/azu/reQUnit/blob/master/LICENSE-MIT"
-        }
-    ],
-    "main": "lib/reQUnit",
-    "engines": {
-        "node": ">= 0.8.0"
-    },
-    "scripts": {
-        "test": "grunt test"
-    },
-    "devDependencies": {
-        "grunt-contrib-jshint": "~0.6.4",
-        "grunt-contrib-nodeunit": "~0.2.0",
-        "grunt-contrib-watch": "~0.5.3",
-        "grunt": "~0.4.1",
-        "mocha": "~1.13.0",
-        "chai": "~1.8.1",
-        "grunt-mocha": "~0.4.1",
-        "grunt-mocha-test": "~0.7.0"
-    },
-    "keywords": ["Qunit", "jasmine", "Esprima", "AST"]
-
+  "name": "reQUnit",
+  "description": "Converting Qunit to jasmine.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/azu/reQUnit",
+  "author": {
+    "name": "azu",
+    "email": "azuciao@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azu/reQUnit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azu/reQUnit/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/azu/reQUnit/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "bin/reQUnit",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "estraverse": "~1.3.2",
+    "esprima": "~1.0.4",
+    "lodash": "~2.2.1",
+    "escodegen": "0.0.28"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.1",
+    "mocha": "~1.13.0",
+    "chai": "~1.8.1",
+    "grunt-mocha": "~0.4.1",
+    "grunt-mocha-test": "~0.7.0"
+  },
+  "keywords": [
+    "Qunit",
+    "jasmine",
+    "Esprima",
+    "AST"
+  ]
 }
