@@ -62,4 +62,30 @@ describe("reQunit", function () {
             })
         });
     });
+    context("When module has setup/teardown", function () {
+        it("move tests to module", function () {
+            var ast = reQunit(esprima.parse('function a() {' +
+                'module( "module A", {' +
+                '    setup: function() {' +
+                '    },' +
+                '    teardown: function() {' +
+                '    }' +
+                '});' +
+                'test("test 1", function () {' +
+                '    ok(true, "should be true");' +
+                '});' +
+                '}'));
+            equalAstToFn(ast, function a() {
+                module("module A", function () {
+                    setup(function () {
+                    });
+                    teardown(function () {
+                    });
+                    test("test 1", function () {
+                        ok(true, "should be true");
+                    });
+                });
+            })
+        });
+    });
 });

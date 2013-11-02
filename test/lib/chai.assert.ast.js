@@ -13,8 +13,7 @@ exports.equalAstToFn = function (ast, fn2) {
 
         assert.fail("equalAstToFn Error", e)
     }
-    console.log("actual : ", escodegen.generate(ast1), "\n");
-    console.log("expect : ", escodegen.generate(ast2), "\n");
-
+//    console.log("actual : ", escodegen.generate(ast1), "\n");
+//    console.log("expect : ", escodegen.generate(ast2), "\n");
     assert.deepEqual(ast1, ast2);
 };
