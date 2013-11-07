@@ -1,13 +1,13 @@
-var reQunit = require("../lib/reQUnit").reQunit;
+var reStructure = require("../lib/reQUnit").reStructure;
 var assert = require('chai').assert;
 var esprima = require("esprima");
 var escodegen = require("escodegen");
 var equalAstToFn = require("./lib/chai.assert.ast").equalAstToFn;
-describe("reQunit", function () {
+describe("reStructure", function () {
     var context = describe;
     context("When without change", function () {
         it("should be same", function () {
-            var ast = reQunit(esprima.parse('function a() {' +
+            var ast = reStructure(esprima.parse('function a() {' +
                 'test("test name", function () {' +
                 '    ok(true, "should be true");' +
                 '});' +
@@ -21,7 +21,7 @@ describe("reQunit", function () {
     });
     context("When has single module()", function () {
         it("move test to module", function () {
-            var ast = reQunit(esprima.parse('function a() {' +
+            var ast = reStructure(esprima.parse('function a() {' +
                 'module("module +TEST+");' +
                 'test("test name", function () {' +
                 '    ok(true, "should be true");' +
@@ -38,7 +38,7 @@ describe("reQunit", function () {
     });
     context("When has multiple module()", function () {
         it("move each test to each module", function () {
-            var ast = reQunit(esprima.parse('function a() {' +
+            var ast = reStructure(esprima.parse('function a() {' +
                 'module("module 1");' +
                 'test("test 1", function () {' +
                 '    ok(true, "should be true");' +
@@ -64,7 +64,7 @@ describe("reQunit", function () {
     });
     context("When module has setup/teardown", function () {
         it("move tests to module", function () {
-            var ast = reQunit(esprima.parse('function a() {' +
+            var ast = reStructure(esprima.parse('function a() {' +
                 'module( "module A", {' +
                 '    setup: function() {' +
                 '    },' +

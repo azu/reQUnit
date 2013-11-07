@@ -1,5 +1,6 @@
+var reStructure = require("../lib/reQUnit").reStructure;
 var reQunit = require("../lib/reQUnit").reQunit;
-var rephrase = require("../lib/rephrase")
+var rephrase = require("../lib/rephrase");
 var assert = require('chai').assert;
 var esprima = require("esprima");
 var escodegen = require("escodegen");
@@ -12,10 +13,19 @@ describe("rephrase", function () {
         var ruleData = fs.readFileSync(path.join(__dirname, "../lib/rephraseRule/qunit-to-jamine-rules.js"));
         var qunitData = fs.readFileSync(path.join(__dirname, "../example/simple-code.js"));
         it("test", function () {
-            var structAST = reQunit(esprima.parse(qunitData));
+            var structAST = reStructure(esprima.parse(qunitData));
             var transformedAST = rephrase.astTransformSource(escodegen.generate(structAST), ruleData);
             console.log(escodegen.generate(transformedAST));
-
+        });
+    });
+});
+describe("aaaaasadasdas", function () {
+    var context = describe;
+    context("When without change", function () {
+        var ruleData = fs.readFileSync(path.join(__dirname, "../lib/rephraseRule/qunit-to-jamine-rules.js"));
+        var qunitData = fs.readFileSync(path.join(__dirname, "../example/simple-code.js"));
+        it("test", function () {
+            console.log(reQunit(qunitData, ruleData));
         });
     });
 });
