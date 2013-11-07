@@ -9,12 +9,13 @@ var path = require("path");
 describe("rephrase", function () {
     var context = describe;
     context("When without change", function () {
-        it("test", function (done) {
-            fs.readFile(path.join(__dirname, "../example/simple-rules.js"), 'utf-8', function (err, data) {
-                // 読み取った結果を出力する
-                console.log(rephrase.transformSource(data, data));
-                done();
-            });
+        var ruleData = fs.readFileSync(path.join(__dirname, "../lib/rephraseRule/qunit-to-jamine-rules.js"));
+        var qunitData = fs.readFileSync(path.join(__dirname, "../example/simple-code.js"));
+        it("test", function () {
+            var structAST = reQunit(esprima.parse(qunitData));
+            var transformedAST = rephrase.astTransformSource(escodegen.generate(structAST), ruleData);
+            console.log(escodegen.generate(transformedAST));
+
         });
     });
 });
