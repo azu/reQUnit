@@ -10,7 +10,7 @@ describe("rephrase", function () {
     var context = describe;
     context("When without change", function () {
         it("test", function (done) {
-            fs.readFile(path.join(__dirname, "simple-rules.js"), 'utf-8', function (err, data) {
+            fs.readFile(path.join(__dirname, "../example/simple-rules.js"), 'utf-8', function (err, data) {
                 // 読み取った結果を出力する
                 console.log(rephrase.transformSource(data, data));
                 done();

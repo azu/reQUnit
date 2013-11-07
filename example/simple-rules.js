@@ -23,18 +23,16 @@
 /* expect(actual).toEqual(expected); */
 
 
-function a() {
-    module("module A", function a() {
-        setup(function () {
-            this.myValue = 1
-        });
-        teardown(function () {
-        });
-        test("test 1", function () {
-            ok(true, "should be true");
-        });
-        test("equal", function () {
-            equal(this.myValue, 1);
-        });
+module("module A", function a() {
+    setup(function () {
+        this.myValue = 1
     });
-}
+    teardown(function () {
+    });
+    test("test 1", function () {
+        ok(true, "should be true");
+    });
+    test("equal", function () {
+        equal(this.myValue, 1);
+    });
+});
