@@ -19,7 +19,7 @@ describe("rephrase", function () {
         });
     });
 });
-describe("aaaaasadasdas", function () {
+describe("reQunit", function () {
     var context = describe;
     context("When without change", function () {
         var ruleData = fs.readFileSync(path.join(__dirname, "../lib/rephraseRule/qunit-to-jamine-rules.js"));
