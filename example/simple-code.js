@@ -72,7 +72,6 @@ test("throws", function () {
         "raised error message contains 'description'"
     );
 });
-
 test("a test", 2, function () {
     function calc(x, operation) {
         return operation(x);

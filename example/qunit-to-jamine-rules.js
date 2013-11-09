@@ -14,6 +14,10 @@
 /* test(a, fn) */
 /* it(a, fn) */
 
+/* forall a amount fn. */
+/* test(a,amount, fn) */
+/* it(a, fn) */
+
 // ======= assertion ==================
 // QUnit expect is not support...
 /* forall amount. */
