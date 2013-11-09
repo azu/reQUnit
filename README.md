@@ -4,9 +4,17 @@ Converting QUnit to jasmine.
 
 ## Getting Started
 
-```js
+```sh
 $ node bin/reQUnit.js example/simple-code.js
 ```
+
+## Option
+
+```sh
+$ node bin/reQUnit.js -d path/to/definition.js example/simple-code.js
+```
+
+Definition rule is along with [Rephrase](https://github.com/puffnfresh/rephrase "Rephrase").
 
 ## Contributing
 
